@@ -1,5 +1,5 @@
-class Calculator():
-    """
+
+"""
     docstring for Calculator
     Description:
     This is the main class.
@@ -7,8 +7,7 @@ class Calculator():
     |Sr.No.| Name | Date | Changes made |
     |1.|Ansh Sharma|8th December,2020|Creation of the class|
     |2.|Ansh Shaema|9th December 2020|Basic Calculator|
-    """
-
+"""
 
 from tkinter import *
 
@@ -61,19 +60,19 @@ def clear():
 
 
 
-    # Main Method Call
+#Driver code
 if __name__ == "__main__":
     # Create a GUI window
     gui = Tk()
 
     # Set the background colour of the window
-    gui.configure(background="Black")
+    gui.configure(background="black")
 
     # Set the title of the GUI window
     gui.title("Calculator")
 
     # Set the size of the window
-    gui.geometry("500x500")
+    gui.geometry("270x150")
 
     # StringVar() is the variable class we create as an instance of this class
     equation = StringVar()
@@ -131,7 +130,7 @@ if __name__ == "__main__":
     divide = Button(gui, text='/', fg="white", bg="orange", command=lambda: press("/"), height=1, width=7)
     divide.grid(row=5, column=3)
 
-    equal = Button(gui, text='=', fg="white", bg="orange", command=lambda: press("="), height=1, width=7)
+    equal = Button(gui, text='=', fg="white", bg="orange", command=equalpress, height=1, width=7)
     equal.grid(row=5, column=2)
 
     clear = Button(gui, text='clear', fg="white", bg="orange", command=clear, height=1, width=7)
