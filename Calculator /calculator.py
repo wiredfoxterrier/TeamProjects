@@ -60,8 +60,9 @@ def clear():
     equation.set("")
 
 
-# Main Method
-def main():
+
+    # Main Method Call
+if __name__ == "__main__":
     # Create a GUI window
     gui = Tk()
 
@@ -72,7 +73,7 @@ def main():
     gui.title("Calculator")
 
     # Set the size of the window
-    gui.geometry("500X500")
+    gui.geometry("500x500")
 
     # StringVar() is the variable class we create as an instance of this class
     equation = StringVar()
@@ -140,7 +141,3 @@ def main():
     decimal.grid(row=6, column=0)
 
     gui.mainloop()
-
-    # Main Method Call
-    if __name__ == "__main__":
-        main()
