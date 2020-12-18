@@ -6,7 +6,7 @@
     Record:
     |Sr.No.| Name | Date | Changes made |
     |1.|Ansh Sharma|8th December,2020|Creation of the class|
-    |2.|Ansh Shaema|9th December 2020|Basic Calculator|
+    |2.|Ansh Sharma|9th December 2020|Basic Calculator|
 """
 
 from tkinter import *
