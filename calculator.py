@@ -7,6 +7,8 @@
     |Sr.No.| Name | Date | Changes made |
     |1.|Ansh Sharma|8th December,2020|Creation of the class|
     |2.|Ansh Sharma|9th December 2020|Basic Calculator|
+    |3.|Vishnu Bhargav|18th December 2020|Resizing Buttons|
+    
 """
 
 from tkinter import *
@@ -59,8 +61,7 @@ def clear():
     equation.set("")
 
 
-
-#Driver code
+# Driver code
 if __name__ == "__main__":
     # Create a GUI window
     gui = Tk()
@@ -85,58 +86,76 @@ if __name__ == "__main__":
 
     equation.set("Enter expression")
 
+    # Configuring Grid
+    Grid.rowconfigure(gui, 0, weight=1)
+    Grid.columnconfigure(gui, 0, weight=1)
+    Grid.rowconfigure(gui, 1, weight=1)
+    Grid.columnconfigure(gui, 1, weight=1)
+    Grid.rowconfigure(gui, 2, weight=1)
+    Grid.columnconfigure(gui, 2, weight=1)
+    Grid.rowconfigure(gui, 3, weight=1)
+    Grid.columnconfigure(gui, 3, weight=1)
+    Grid.rowconfigure(gui, 4, weight=1)
+    Grid.columnconfigure(gui, 4, weight=1)
+    Grid.rowconfigure(gui, 5, weight=1)
+    Grid.columnconfigure(gui, 5, weight=1)
+    Grid.rowconfigure(gui, 5, weight=1)
+    Grid.columnconfigure(gui, 5, weight=1)
+    Grid.rowconfigure(gui, 6, weight=1)
+    Grid.columnconfigure(gui, 6, weight=1)
+
     # Create buttons and place at a particular location inside the root window
     # When user presses the button, the command or the function affiliated to it is executed
 
     button1 = Button(gui, text='1', fg="white", bg="orange", command=lambda: press(1), height=1, width=7)
-    button1.grid(row=2, column=0)
+    button1.grid(row=2, column=0, sticky="NSEW")
 
     button2 = Button(gui, text='2', fg="white", bg="orange", command=lambda: press(2), height=1, width=7)
-    button2.grid(row=2, column=1)
+    button2.grid(row=2, column=1, sticky="NSEW")
 
     button3 = Button(gui, text='3', fg="white", bg="orange", command=lambda: press(3), height=1, width=7)
-    button3.grid(row=2, column=2)
+    button3.grid(row=2, column=2, sticky="NSEW")
 
     button4 = Button(gui, text='4', fg="white", bg="orange", command=lambda: press(4), height=1, width=7)
-    button4.grid(row=3, column=0)
+    button4.grid(row=3, column=0, sticky="NSEW")
 
     button5 = Button(gui, text='5', fg="white", bg="orange", command=lambda: press(5), height=1, width=7)
-    button5.grid(row=3, column=1)
+    button5.grid(row=3, column=1, sticky="NSEW")
 
     button6 = Button(gui, text='6', fg="white", bg="orange", command=lambda: press(6), height=1, width=7)
-    button6.grid(row=3, column=2)
+    button6.grid(row=3, column=2, sticky="NSEW")
 
     button7 = Button(gui, text='7', fg="white", bg="orange", command=lambda: press(7), height=1, width=7)
-    button7.grid(row=4, column=0)
+    button7.grid(row=4, column=0, sticky="NSEW")
 
     button8 = Button(gui, text='8', fg="white", bg="orange", command=lambda: press(8), height=1, width=7)
-    button8.grid(row=4, column=1)
+    button8.grid(row=4, column=1, sticky="NSEW")
 
     button9 = Button(gui, text='9', fg="white", bg="orange", command=lambda: press(9), height=1, width=7)
-    button9.grid(row=4, column=2)
+    button9.grid(row=4, column=2, sticky="NSEW")
 
     button0 = Button(gui, text='0', fg="white", bg="orange", command=lambda: press(0), height=1, width=7)
-    button0.grid(row=5, column=0)
+    button0.grid(row=5, column=0, sticky="NSEW")
 
     plus = Button(gui, text='+', fg="white", bg="orange", command=lambda: press("+"), height=1, width=7)
-    plus.grid(row=2, column=3)
+    plus.grid(row=2, column=3, sticky="NSEW")
 
     minus = Button(gui, text='-', fg="white", bg="orange", command=lambda: press("-"), height=1, width=7)
-    minus.grid(row=3, column=3)
+    minus.grid(row=3, column=3, sticky="NSEW")
 
     multiply = Button(gui, text='*', fg="white", bg="orange", command=lambda: press("*"), height=1, width=7)
-    multiply.grid(row=4, column=3)
+    multiply.grid(row=4, column=3, sticky="NSEW")
 
     divide = Button(gui, text='/', fg="white", bg="orange", command=lambda: press("/"), height=1, width=7)
-    divide.grid(row=5, column=3)
+    divide.grid(row=5, column=3, sticky="NSEW")
 
     equal = Button(gui, text='=', fg="white", bg="orange", command=equalpress, height=1, width=7)
-    equal.grid(row=5, column=2)
+    equal.grid(row=5, column=2, sticky="NSEW")
 
     clear = Button(gui, text='clear', fg="white", bg="orange", command=clear, height=1, width=7)
-    clear.grid(row=5, column=1)
+    clear.grid(row=5, column=1, sticky="NSEW")
 
     decimal = Button(gui, text='.', fg="white", bg="orange", command=lambda: press("."), height=1, width=7)
-    decimal.grid(row=6, column=0)
+    decimal.grid(row=6, column=0, sticky="NSEW")
 
     gui.mainloop()
