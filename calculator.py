@@ -8,6 +8,7 @@
     |1.|Ansh Sharma|8th December,2020|Creation of the class|
     |2.|Ansh Sharma|9th December 2020|Basic Calculator|
     |3.|Vishnu Bhargav|18th December 2020|Resizing Buttons|
+    |4.|Vishnu Bhargav|20th December 2020|Resizing expression field|
     
 """
 
@@ -82,7 +83,7 @@ if __name__ == "__main__":
     expression_field = Entry(gui, textvariable=equation)
 
     # Grid Method is used for placing the widgets at respective positions in a table like structure
-    expression_field.grid(columnspan=4, ipadx=70)
+    expression_field.grid(columnspan=4, ipadx=70, sticky="NSEW")
 
     equation.set("Enter expression")
 
@@ -159,3 +160,4 @@ if __name__ == "__main__":
     decimal.grid(row=6, column=0, sticky="NSEW")
 
     gui.mainloop()
+
